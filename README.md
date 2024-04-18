@@ -1,2 +1,8 @@
-# P12SportSee
- Dans ce projet, vous développerez un tableau de bord d'analytics de coaching sportif. Votre mission sera d'intégrer des graphiques et des diagrammes en utilisant React et de récupérer des données via une API.
+# React + Vite
+
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
