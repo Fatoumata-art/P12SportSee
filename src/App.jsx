@@ -1,6 +1,7 @@
 import Home from './pages/home'
 import Header from './components/header'
-import Sidebar from './components/sidebar'
+import SideMenu from './components/sidemenu'
+
 
 
 
@@ -10,7 +11,8 @@ function App() {
   return (
       <div className='container'>
           <Header />
-          <Sidebar />
+          <SideMenu />
+          <Home />
           {/* <Home /> */}
       </div>
   )

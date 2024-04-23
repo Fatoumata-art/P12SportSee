@@ -1,41 +1,45 @@
 // import List from "./listItem"
-import { IoMdBicycle } from "react-icons/io";
+import DirectionsBikeIcon from '@mui/icons-material/DirectionsBike';
+import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
+import PoolIcon from '@mui/icons-material/Pool';
+import SelfImprovementIcon from '@mui/icons-material/SelfImprovement';
 //import {Link } from "react-router-dom";
-function Sidebar(){
+function SideMenu(){
 
     const navVertical = [
         {
             path:"/",
-            icon: <IoMdBicycle />
+            icon: <SelfImprovementIcon />
         }, 
         {    
             path:"/",
-            icon: <IoMdBicycle />
+            icon: <PoolIcon />
         }, 
         {
             path:"/",
-            icon: <IoMdBicycle />
+            icon: <DirectionsBikeIcon />
         }, 
         {
             path:"/",
-            icon: <IoMdBicycle />}, 
+            icon: <FitnessCenterIcon />}, 
     ]
 
     return (
-        <aside className='sideBar'> 
+        <aside className='side-menu'> 
                 <ul  className="navigation_verticale">
                     {
                         navVertical.map((item, index) => (
                             //<Link to={item.path}>
-                                <li className="sideBar-list-icon" key={index}>{item.icon}</li>
+                                <li className="side-menu-list-icon" key={index}>{item.icon}</li>
                          // </Link>
                         ))
                     }
+                    
                 </ul>
                 <p>Copiryght, SportSee 2020</p>
         </aside>
     )
 }
 
-export default Sidebar
+export default SideMenu
  

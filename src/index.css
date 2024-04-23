@@ -8,15 +8,19 @@ a{
   text-decoration: none;
 }
 
+.container{
+  width: 100%;
+}
+
 /* Header */
 
 .header{
   display: flex;
   justify-content: space-between;
-  height: 100px;
+  /* height: 100px; */
   background-color: black;
   box-shadow: 0 6px 7px -3px rgba(0, 0, 0, 0.35);
-
+  width: 100%;
 }
 
 .logo{
@@ -41,22 +45,24 @@ a{
 
 /* End Header */
 
-/* SideBar */
+/* side-menu */
 
-.sideBar{
+.side-menu{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100px;
-  height: 90vh;
+  width: 90px;
+  min-height: 100vh;
   background-color: black;
   box-shadow: 0 8px 1épx -3px rgba(0, 0, 0, 0.35);
- position: relative;
+ position: absolute;
+
+ 
 
 }
 
-.sideBar ul{
+.side-menu ul{
   padding: 0;
   height: 250px;
   display: flex;
@@ -65,9 +71,9 @@ a{
   
 }
 
-.sideBar-list-icon{
-  width: 50px;
-  height: 50px;
+.side-menu-list-icon{
+  width: 60px;
+  height: 60px;
   background-color: white;
   border-radius: 5px;
   color: #E60000;
@@ -76,10 +82,10 @@ a{
   display: flex;
   justify-content: center;
   align-items: center;
-
+  cursor: pointer;
 }
 
-.sideBar p{
+.side-menu p{
   color: white;
   /* writing-mode: vertical-lr; */
   transform: rotate(-90deg);
@@ -90,4 +96,92 @@ a{
   
 }
 
-/* End SideBar */
+/* End side-menu */
+
+.user_header{
+  width: 100%;
+  height: 130px;
+}
+
+/* main */
+
+.main{
+  height: 600px;
+  width: 90%;
+  position: absolute;
+  right: 0;
+}
+
+/*  banner */
+
+/* main container */
+
+.main_container{
+  display: flex;
+  gap: 20px;
+  padding-right: 20px;
+  height: 80vh;
+}
+
+/* end main container */
+
+/* chart container */
+
+.charts_container{
+ flex: 3;
+  background-color: blue;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+/* chart */
+
+.chart-bar, .chart-card{
+  margin: 20px;
+  background-color: #FBFBFB;
+  border-radius: 5px;
+  height: 260px;
+}
+
+.chart-card{
+  
+}
+/* end chart container  */
+
+/* aside */
+
+.aside_left{
+  flex: 1;
+  background-color: #E60000;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.widget{
+  background-color: #FBFBFB;
+  margin: 20px;
+  height: 120px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  font-size: 0.8rem;
+}
+ .widget .icon{
+  background-color: #e09292;
+  color: #E60000;
+  height: 50px;
+  width: 50px;
+  border-radius: 5px;
+ 
+ }
+
+ 
+
+ .widget .widget-text h3{
+  margin: 0;
+ }
+/* end aside */

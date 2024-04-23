@@ -7,9 +7,7 @@ function Header(){
         <header className='header'> 
                 <img src={logo} className='logo' alt="logo sportSee" />
                 <ul className="navigation_horizontale">
-                    
-                        <List items={navigation}/>
-                   
+                    <List items={navigation}/>
                 </ul>
         </header>
     )
