@@ -9,19 +9,19 @@ function SideMenu(){
     const navVertical = [
         {
             path:"/",
-            icon: <SelfImprovementIcon />
+            icon: <SelfImprovementIcon className='icon' style={{fontSize: "2rem"}}/>
         }, 
         {    
             path:"/",
-            icon: <PoolIcon />
+            icon: <PoolIcon style={{fontSize: "2rem"}}/>
         }, 
         {
             path:"/",
-            icon: <DirectionsBikeIcon />
+            icon: <DirectionsBikeIcon style={{fontSize: "2rem"}}/>
         }, 
         {
             path:"/",
-            icon: <FitnessCenterIcon />}, 
+            icon: <FitnessCenterIcon style={{fontSize: "2rem"}}/>}, 
     ]
 
     return (

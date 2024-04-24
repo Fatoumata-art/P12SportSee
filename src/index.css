@@ -78,7 +78,6 @@ a{
   border-radius: 5px;
   color: #E60000;
   list-style: none;
-  font-size: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -101,6 +100,7 @@ a{
 .user_header{
   width: 100%;
   height: 130px;
+ 
 }
 
 /* main */
@@ -129,7 +129,6 @@ a{
 
 .charts_container{
  flex: 3;
-  background-color: blue;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
@@ -138,14 +137,28 @@ a{
 /* chart */
 
 .chart-bar, .chart-card{
-  margin: 20px;
-  background-color: #FBFBFB;
+  margin: 20px 0px 20px 0px;
   border-radius: 5px;
   height: 260px;
 }
 
+.chart-bar .card{
+  background-color: #FBFBFB;
+  height: 100%;
+}
 .chart-card{
   
+  display: flex;
+ 
+  gap: 20px;
+ 
+}
+
+.card{
+  background-color: #FBFBFB;
+  flex: 3;
+  border-radius: 5px;
+  height: 100%;
 }
 /* end chart container  */
 
@@ -153,7 +166,6 @@ a{
 
 .aside_left{
   flex: 1;
-  background-color: #E60000;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
@@ -171,12 +183,10 @@ a{
   font-size: 0.8rem;
 }
  .widget .icon{
-  background-color: #e09292;
-  color: #E60000;
   height: 50px;
   width: 50px;
   border-radius: 5px;
- 
+  font-size: 1rem;
  }
 
  

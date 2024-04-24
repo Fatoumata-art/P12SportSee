@@ -21,26 +21,20 @@ function Home(){
            <section className="main_container">
                 <div className="charts_container">
                     <div className="chart-bar">
-                            charts
-                        {/* <Chart
-                            chartType="Bar"
-                            width="100%"
-                            height="300px"
-                            backgroundColor ="gray"
-                            data={data}
-                            
-                        /> */}
+                         <Card />
     
                     </div>
                     <div className="chart-card">
-                        {/* <Card /> */}
+                        <Card />
+                        <Card />
+                        <Card />
                     </div>
                 </div>
                 <aside className="aside_left">
-                    <Widget />
-                    <Widget />
-                    <Widget />
-                    <Widget />
+                    <Widget type="Calorie" />
+                    <Widget  type="Protéine"  />
+                    <Widget  type="Glucide"  />
+                    <Widget  type="Lipide" />
                 </aside>
             </section>
         </main>
