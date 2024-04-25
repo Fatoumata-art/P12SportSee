@@ -1,17 +1,14 @@
-import Card from "../components/card"
-import { Chart } from "react-google-charts";
+import Chart4 from "../components/Chart4";
+import Chart3 from "../components/Chart3";
+import Chart2 from "../components/Chart2";
+import Chart from "../components/chart";
+
 import Widget from "../components/widget";
 
 
 function Home(){
 
-     const data = [
-        ["Year", "Sales", "Expenses", "Profit"],
-        ["2014", 1000, 400, 200],
-        ["2015", 1170, 460, 250],
-        ["2016", 660, 1120, 300],
-        ["2017", 1030, 540, 350],
-      ];
+    
     return (
         <main className="main">
            <banner className="user_header">
@@ -21,14 +18,14 @@ function Home(){
            <section className="main_container">
                 <div className="charts_container">
                     <div className="chart-bar">
-                         <Card />
+                         <Chart />
     
                     </div>
                     <div className="chart-card">
-                        <Card />
-                        <Card />
-                        <Card />
-                    </div>
+                        <Chart2 />
+                        <Chart3 />
+                        <Chart4 /> 
+                    </div>               
                 </div>
                 <aside className="aside_left">
                     <Widget type="Calorie" />
