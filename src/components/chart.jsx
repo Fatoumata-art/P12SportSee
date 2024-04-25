@@ -79,17 +79,17 @@ function Chart(){
             width={500}
             height={300}
             data={data}
-            margin={{
-              top: 20,
-              right: 30,
-              left: 20,
-              bottom: 5,
-            }}
+            // margin={{
+            //   top: 20,
+            //   right: 30,
+            //   left: 20,
+            //   bottom: 5,
+            // }}
           >
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="name" />
             
-            <Tooltip />
+            
           
             <Bar yAxisId="left" dataKey="pv" fill="#282D30" />
             <Bar yAxisId="right" dataKey="uv" fill="#E60000" />

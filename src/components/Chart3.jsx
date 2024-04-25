@@ -45,13 +45,13 @@ const data = [
     return (
         <div className='card' style={{backgroundColor: "#282D30"}}>
       <ResponsiveContainer width="100%" height="100%">
-        <RadarChart cx="50%" cy="50%" outerRadius="80%" data={data}>
+        <RadarChart cx="50%" cy="50%" outerRadius="70%" data={data}>
           <PolarGrid />
           <PolarAngleAxis dataKey="subject" />
           <PolarRadiusAxis angle={30} domain={[0, 150]} />
          
           <Radar name="Lily" dataKey="B" stroke="#E60000" fill="#E60000" fillOpacity={0.6} />
-          <Legend />
+         
         </RadarChart>
       </ResponsiveContainer>
       </div>

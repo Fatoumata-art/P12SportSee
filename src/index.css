@@ -123,6 +123,7 @@ a{
   height: 80vh;
 }
 
+
 /* end main container */
 
 /* chart container */
@@ -212,3 +213,42 @@ a{
   margin: 0;
  }
 /* end aside */
+
+/* responsive  */
+
+@media  screen and (max-width: 780px) {
+  .main{
+    width: 85%;
+  }
+  .main_container {
+    flex-direction: column-reverse;
+    height: fit-content;
+    
+  }
+
+  .charts_container{
+    display: flex;
+   
+  }
+  .aside_left{
+    
+   flex-direction: unset;
+    display: flex;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .widget{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    width: 230px;
+    margin: 0;
+  }
+  .card{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    height: 80%;
+    font-size: 0.6rem;
+  }
+  .side-menu{
+    height: 140vh;
+  }
+}
