@@ -6,7 +6,7 @@ import Chart from "../components/chart";
 import Widget from "../components/widget";
 
 
-function Home(){
+function Profil(){
 
     
     return (
@@ -38,4 +38,4 @@ function Home(){
     )
 }
 
-export default Home
+export default Profil

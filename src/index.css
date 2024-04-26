@@ -252,3 +252,12 @@ a{
     height: 140vh;
   }
 }
+
+@media  screen and (width: 1024px) {
+  .side-menu{
+    height: 120vh;
+  }
+  .card{
+    height: 90%;
+  }
+}
