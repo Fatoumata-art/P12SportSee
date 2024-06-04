@@ -1,7 +1,5 @@
 import Profil from './pages/profil'
-import Header from './components/header'
-import SideMenu from './components/sidemenu'
-
+import { Routes, Route  } from 'react-router-dom';
 
 
 
@@ -9,12 +7,9 @@ function App() {
  
 
   return (
-      <div className='container'>
-          <Header />
-          <SideMenu />
-          <Profil />
-          {/* <Home /> */}
-      </div>
+    <Routes>
+      <Route path="/" element={<Profil />}></Route>
+    </Routes>
   )
 }
 
