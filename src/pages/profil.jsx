@@ -1,17 +1,18 @@
 import Chart4 from "../components/Chart4";
-import Chart3 from "../components/Chart3";
-import Chart2 from "../components/Chart2";
-import Chart from "../components/chart";
+import Chart3 from "../components/charts/Chart3";
+import Chart2 from "../components/charts/Chart2";
+import Chart from "../components/charts/chart";
 import Service from "../service/service";
 import Widget from "../components/widget";
 
-
+console.log()
 function Profil(){
 
     
     return (
         <main className="main">
            <banner className="user_header">
+            <Service />
            <h1>Bonjour </h1>
             <p>Félicitation ! Vous avez explosé vos objectifs hier</p>
            </banner>
@@ -33,7 +34,7 @@ function Profil(){
                     <Widget  type="Protéine"  />
                     <Widget  type="Glucide"  />
                     <Widget  type="Lipide" />
-                    <Service />
+                   
                 </aside>
             </section>
         </main>

@@ -126,6 +126,13 @@ a{
 
 /* end main container */
 
+.user_select{
+  width: 300px;
+  padding: 2rem;
+}
+
+
+
 /* chart container */
 
 .charts_container{

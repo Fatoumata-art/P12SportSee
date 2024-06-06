@@ -1,25 +1,34 @@
 import React, { useState, useEffect } from 'react'
-import { fetchUserData } from './api'
+import MenuItem from '@mui/material/MenuItem';
+import fetchUserData from "./api"
 
-const Service = () => {
+
+function Service(){
 
   const [backEndData, setbackEndData] = useState([])
 
+  
   useEffect(() => {
-    fetchUserData().then( async res => {
-     let data = await res.data
-      setbackEndData(() => data);
-      if(backEndData){
-        console.log(backEndData)
-      }
-      console.log(backEndData);
-
-    }) // pass an url if fetching from server(backend)
+    // Je recupère les données avec fetchUserData() 
+    // et je remplie directement setBackendData(() => data)
+    fetchUserData()
+    .then( (data) =>
+     setbackEndData(() => data)
+    )
+    .catch((error) => console.log(error))
   },[])
 
-  return (
-    <div>data</div>
-  )
+    console.log(backEndData)
+    // ET j'affiche les données
+    return (
+      backEndData.data?.map((t) => {
+          return (
+
+            <MenuItem key={t.id}>{t.userInfos.firstName}</MenuItem>
+          )
+      })
+    )
+
 }
 
 export default Service
