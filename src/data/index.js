@@ -6,7 +6,7 @@ export const DATA = [
             lastName: 'Dovineau',
             age: 31,
         },
-        todayScore: 0.12,
+        score: 0.12,
         keyData: {
             calorieCount: 1930,
             proteinCount: 155,
@@ -120,31 +120,31 @@ const USER_AVERAGE_SESSIONS = [
         userId: 12,
         sessions: [
             {
-                day: 1,
+                day: "L",
                 sessionLength: 30
             },
             {
-                day: 2,
+                day: "M",
                 sessionLength: 23
             },
             {
-                day: 3,
+                day: "M",
                 sessionLength: 45
             },
             {
-                day: 4,
+                day: "J",
                 sessionLength: 50
             },
             {
-                day: 5,
+                day: "V",
                 sessionLength: 0
             },
             {
-                day: 6,
+                day: "S",
                 sessionLength: 0
             },
             {
-                day: 7,
+                day: "D",
                 sessionLength: 60
             }
         ]

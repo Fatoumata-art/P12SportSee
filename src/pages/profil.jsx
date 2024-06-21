@@ -1,39 +1,104 @@
-import Chart4 from "../components/Chart4";
+import React, { useState, useEffect } from 'react'
+import Chart4 from "../components/charts/Chart4";
 import Chart3 from "../components/charts/Chart3";
 import Chart2 from "../components/charts/Chart2";
 import Chart from "../components/charts/chart";
-import Service from "../service/service";
 import Widget from "../components/widget";
+import fetchUserData from "./../service/api"
+import { useParams } from "react-router-dom";
+
 
 console.log()
 function Profil(){
+    const [backEndData, setbackEndData] = useState([]);
+    const { id } = useParams()
+  
+    useEffect(() => {
+        // Je recupère les données avec fetchUserData() 
+        // et je remplie directement setBackendData(() => data)
+        fetchUserData()
+        .then( (data) =>
+         setbackEndData(() => data)
+        
+        )
+        .catch((error) => console.log(error))
+      },[])
+      
+    const resData = backEndData.data?.filter((data) => data.id == id);
+    
+    const userData = resData && resData.length ? resData[0] : null;
+    
 
+     //feching user activity data dynamically
+     const resActivity = backEndData.activity?.filter((data) => data.userId == id);
+     const userActivity = resActivity && resActivity.length ? resActivity[0] : null;
+    // console.log("activities", userActivity)
+   const dataChartActivity = userActivity?.sessions.map((session, index) => {
+    return {
+        name: index + 1,
+        uv: session.calories,
+        pv: session.kilogram
+    };
+   })
+   
+    //feching user session 
+    const resSessions = backEndData.sessions?.filter((session) => session.userId = id)
+    const userSessions = resSessions && resSessions.length ? resSessions[0] : null;
+    const dataChartSessions = userSessions?.sessions.map((session) => {
+        return {
+           
+            pv: session.sessionLength,
+            name: session.day
+        }
+    })
+    
+
+  //feching user performance 
+    const resPerformance = backEndData.performance?.filter((element) => element.userId = id)
+
+    console.log("performance",resPerformance)
+    const userPerformance = resPerformance && resPerformance.length ? resPerformance[0] : null;
+
+    console.log("resPerfom", resPerformance)
+        console.log("userPerfom", userPerformance)
+        const transformedData = userPerformance?.data.map((item) => {
+            
+            return {
+              subject: userPerformance.kind[item.kind],
+              A: item.kind,
+              B: item.value
+            };
+          });
+        
+      
+
+    
     
     return (
         <main className="main">
-           <banner className="user_header">
-            <Service />
-           <h1>Bonjour </h1>
+           <div className="user_header">
+
+           <h1>Bonjour {userData?.userInfos.firstName}</h1>
             <p>Félicitation ! Vous avez explosé vos objectifs hier</p>
-           </banner>
+           </div>
            <section className="main_container">
                 <div className="charts_container">
                     <div className="chart-bar">
                        
-                         <Chart />
+                        <Chart data={dataChartActivity} />
     
                     </div>
                     <div className="chart-card">
-                        <Chart2 />
-                        <Chart3 />
-                        <Chart4 /> 
+                        <Chart2 data={dataChartSessions} />
+                        <Chart3 data={transformedData} />
+                        <Chart4 value={userData?.score}/> 
                     </div>               
                 </div>
                 <aside className="aside_left">
-                    <Widget type="Calorie" />
-                    <Widget  type="Protéine"  />
-                    <Widget  type="Glucide"  />
-                    <Widget  type="Lipide" />
+                    <Widget type="Calorie" number={userData?.keyData.calorieCount+"g"} />
+                    <Widget  type="Protéine" number={userData?.keyData.proteinCount+"g"} />
+                    <Widget  type="Glucide" number={userData?.keyData.carbohydrateCount+"g"} />
+                    <Widget  type="Lipide" number={userData?.keyData.lipidCount+"g"}/>
                    
                 </aside>
             </section>

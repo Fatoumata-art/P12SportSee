@@ -5,7 +5,7 @@ import FormControl from '@mui/material/FormControl';
 import Select from  '@mui/material/Select';
 
 
-function Selectuser(){
+function getUser(){
    
   const [user, setUser] = useState('');
   const handleChange = (event) => {
@@ -32,7 +32,7 @@ function Selectuser(){
     </Box>
   );
 
-}export default Selectuser
+}export default getUser
 
 
   

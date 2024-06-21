@@ -3,7 +3,7 @@ import EggIcon from '@mui/icons-material/Egg';
 import AppleIcon from '@mui/icons-material/Apple';
 import LunchDiningIcon from '@mui/icons-material/LunchDining';
 
-const Widget = ({type}) => {
+const Widget = ({type, number}) => {
    
     let data ;
    
@@ -13,7 +13,7 @@ const Widget = ({type}) => {
                     icon: <WhatshotIcon  
                     className="icon" 
                     style={{ backgroundColor: "#e2c5c5", color: "#FF0000", fontSize: "small"}} />,
-                    number: "1,930KCal",
+                    number: number,
                     title: "calories",
             };
             break;
@@ -22,7 +22,7 @@ const Widget = ({type}) => {
                         icon: <EggIcon
                         className="icon" 
                     style={{ backgroundColor: "#d6e2ea", color: "#4AB8FF", fontSize: "small"}} />,
-                        number: "1,930KCal",
+                        number: number,
                         title: "Protéines",
                 };
                 break;
@@ -31,7 +31,7 @@ const Widget = ({type}) => {
                             icon: <AppleIcon  
                             className="icon" 
                             style={{ backgroundColor: "#e5e0cd", color: "#f9cf24", fontSize: "small"}} />,
-                            number: "1,930KCal",
+                            number: number,
                             title: "Glucides",
                     };
                     break;
@@ -40,7 +40,7 @@ const Widget = ({type}) => {
                                 icon: <LunchDiningIcon
                                 className="icon" 
                                 style={{ backgroundColor: "#ead6dc", color: "#FD5181", fontSize: "small"}} />,
-                                number: "1,930KCal",
+                                number: number,
                                 title: "Lipides",
                         };
                         break;

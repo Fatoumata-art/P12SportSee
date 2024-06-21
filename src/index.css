@@ -167,7 +167,7 @@ a{
   flex: 3;
   border-radius: 5px;
   height: 100%;
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   align-items: center;
   position: relative;
@@ -184,6 +184,22 @@ a{
   bottom: 20%;
   width: 60px;
   color: rgb(104, 102, 102);
+}
+
+.centered{
+  display: flex;
+}
+
+.card .notes{
+  padding: 15px;
+  color: #cec9c9;
+}
+
+/* rechart */
+
+.recharts-rectangle{
+  border-radius: 3px 3px 0px 0px;
+  margin: 0;
 }
 /* end chart container  */
 

@@ -5,9 +5,10 @@ import Select from  '@mui/material/Select';
 import React, { useState, useEffect } from 'react'
 import MenuItem from '@mui/material/MenuItem';
 import fetchUserData from "./api"
+import {Link} from 'react-router-dom';
 
 
-function Service(){
+function Selectuser(){
 
   const [backEndData, setbackEndData] = useState([])
   const [user, setUser] = useState('');
@@ -41,7 +42,9 @@ function Service(){
           >
             {
               backEndData.data?.map((t) => (
-                <MenuItem key={t.id} value={t.userInfos.firstName}>{t.userInfos.firstName}</MenuItem>
+                <Link to={`/profil/${t.id}`}>
+                  <MenuItem key={t.id} value={t.userInfos.firstName}>{t.userInfos.firstName}</MenuItem>
+                </Link>
                 ))
             }
             </Select>
@@ -53,4 +56,4 @@ function Service(){
 
 }
 
-export default Service
+export default Selectuser

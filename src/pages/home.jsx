@@ -1,10 +1,10 @@
-import Service from "../service/service";
+import Selectuser from "../service/user";
 
 function Home(){
     return (
         <main className="main">
            <div className="user_select">
-            <Service />
+            <Selectuser />
             </div>
         </main>
     )

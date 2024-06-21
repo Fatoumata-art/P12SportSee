@@ -8,51 +8,53 @@ import {
   Tooltip,
   Legend,
   Brush,
+  Text,
   AreaChart,
   Area,
+  LabelList,
   ResponsiveContainer,
 } from 'recharts';
 
-function Chart2 () {
+function Chart2 (props) {
 const data = [
   {
-    name: 'Page A',
+    name: 'L',
     uv: 4000,
     pv: 2400,
     amt: 2400,
   },
   {
-    name: 'Page B',
+    name: 'M',
     uv: 3000,
     pv: 1398,
     amt: 2210,
   },
   {
-    name: 'Page C',
+    name: 'M',
     uv: 2000,
     pv: 9800,
     amt: 2290,
   },
   {
-    name: 'Page D',
+    name: 'J',
     uv: 2780,
     pv: 3908,
     amt: 2000,
   },
   {
-    name: 'Page E',
+    name: 'V',
     uv: 1890,
     pv: 4800,
     amt: 2181,
   },
   {
-    name: 'Page F',
+    name: 'S',
     uv: 2390,
     pv: 3800,
     amt: 2500,
   },
   {
-    name: 'Page G',
+    name: 'D',
     uv: 3490,
     pv: 4300,
     amt: 2100,
@@ -62,14 +64,15 @@ const data = [
 
     return (
         <div className='card' style={{backgroundColor: "#E60000"}}>
-            <ResponsiveContainer width="100%" height="100%">
-                <LineChart data={data} >
-              
-            
-          
-            <Line type="monotone" dataKey="pv" stroke="#82ca9d" fill="#82ca9d" />
-            
-          </LineChart>
+           <p className="notes">Durée moyenne des sessions</p>
+            <ResponsiveContainer width="100%" height="50%">
+              <LineChart data={props.data} dataKey="name">
+                
+                <Line type="monotone" dataKey="pv" stroke="white" activeDot={{ r: 8 }}>
+                  <LabelList dataKey="name" position="bottom" offset={20}/>
+                </Line>
+              </LineChart>
+             
         </ResponsiveContainer>
 
        
