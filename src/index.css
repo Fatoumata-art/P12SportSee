@@ -155,9 +155,7 @@ a{
   height: 100%;
 }
 .chart-card{
-  
   display: flex;
- 
   gap: 20px;
  
 }
@@ -191,10 +189,30 @@ a{
 }
 
 .card .notes{
-  padding: 15px;
-  color: #cec9c9;
+  padding-left: 15px;
+  color: #dcd7d7;
+  opacity: 60%;
+  width: 50%;
 }
 
+.card .days{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+  color: #cec9c9;
+  opacity: 60%;
+  
+}
+
+.card-space-darker{
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 70%;
+  background-color: rgb(252, 6, 6);
+  border-radius: 5px 0px 0px 5px;
+ 
+}
 /* rechart */
 
 .recharts-rectangle{

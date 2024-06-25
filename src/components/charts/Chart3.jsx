@@ -47,10 +47,10 @@ const data = [
       <ResponsiveContainer width="100%" height="100%">
         <RadarChart cx="50%" cy="50%" outerRadius="70%" data={props.data}>
           <PolarGrid />
-          <PolarAngleAxis dataKey="subject" />
+          <PolarAngleAxis dataKey="subject" stroke='#dcd7d7'/>
           {/* <PolarRadiusAxis angle={30} domain={[0, 150]} /> */}
          
-          <Radar name="Lily" dataKey="B" stroke="#E60000" fill="#E60000" fillOpacity={0.6} />
+          <Radar name="Lily" dataKey="B"  fill="#E60000" fillOpacity={0.6} />
          
         </RadarChart>
         

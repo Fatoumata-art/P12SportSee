@@ -2,10 +2,10 @@ import React from 'react'
 import { CircularProgressBar } from '@tomik23/react-circular-progress-bar'
 
 
-const Chart4 = ({value}) => {
+const Chart4 = ({score}) => {
 
     const props = {
-        percent: value , // is require
+        percent: score , // is require
         colorSlice: "#E60000",
         colorCircle: "#f1eeee",
         fontColor: "",

@@ -63,16 +63,22 @@ const data = [
 
 
     return (
-        <div className='card' style={{backgroundColor: "#E60000"}}>
+        <div className='card' 
+          style={{backgroundColor: "#E60000",
+            position: 'relative'
+        }}>
+           <div className='card-space-darker'></div>
            <p className="notes">Durée moyenne des sessions</p>
             <ResponsiveContainer width="100%" height="50%">
               <LineChart data={props.data} dataKey="name">
                 
                 <Line type="monotone" dataKey="pv" stroke="white" activeDot={{ r: 8 }}>
-                  <LabelList dataKey="name" position="bottom" offset={20}/>
+                  
                 </Line>
               </LineChart>
-             
+              <div className='days'>
+                {data.map(item => <span className="day">{item.name}</span>)}
+              </div>
         </ResponsiveContainer>
 
        
