@@ -4,6 +4,7 @@ import { CircularProgressBar } from '@tomik23/react-circular-progress-bar'
 
 const Chart4 = ({score}) => {
 
+  console.log("score",score)
     const props = {
         percent: score , // is require
         colorSlice: "#E60000",

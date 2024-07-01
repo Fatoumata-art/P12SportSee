@@ -209,7 +209,14 @@ a{
   width: 70%;
   background-color: rgb(252, 6, 6);
   border-radius: 5px 0px 0px 5px;
- 
+
+}
+
+/* ToolLip */
+.custom-tooltip {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
 }
 /* rechart */
 

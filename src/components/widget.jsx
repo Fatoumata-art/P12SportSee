@@ -3,16 +3,17 @@ import EggIcon from '@mui/icons-material/Egg';
 import AppleIcon from '@mui/icons-material/Apple';
 import LunchDiningIcon from '@mui/icons-material/LunchDining';
 
-const Widget = ({type, number}) => {
+
+const Widget = ({type, number, icon}) => {
    
     let data ;
    
     switch( type ){
         case "Calorie":
             data = {
-                    icon: <WhatshotIcon  
-                    className="icon" 
-                    style={{ backgroundColor: "#e2c5c5", color: "#FF0000", fontSize: "small"}} />,
+                    icon: icon,  
+                    className:"icon", 
+                    style: { backgroundColor: "#e2c5c5", color: "#FF0000", fontSize: "small"},
                     number: number,
                     title: "calories",
             };

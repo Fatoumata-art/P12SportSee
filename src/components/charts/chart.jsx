@@ -26,10 +26,10 @@ function Chart(props){
           >
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey={props.name} />
-            <Legend legendType="circle" align="right"verticalAlign="top" wrapperStyle={{top: 20}}/>
+            <Legend iconType="circle" align="right"verticalAlign="top" wrapperStyle={{top: 20}}/>
             <Tooltip />
-            <Bar yAxisId="left" dataKey="uv" fill="#282D30" barSize={15} radius={8}/>
-            <Bar yAxisId="right" dataKey="pv" fill="#E60000" barSize={15} radius={8}/>
+            <Bar yAxisId="left" dataKey="pv" fill="#282D30" barSize={10} radius={[5, 5, 0, 0]} unit='kg'/>
+            <Bar yAxisId="right" dataKey="uv" fill="#E60000" barSize={10} radius={[5, 5, 0, 0]} unit='Kcal'/>
           </BarChart>
         </ResponsiveContainer>
         </div>

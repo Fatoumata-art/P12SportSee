@@ -60,3 +60,6 @@ const data = [
   }
 
   export default Chart3
+  // <PolarAngleAxis dataKey="kind" angleAxisId={0} tickLine={false} tick={{ fontSize: 10 }} stroke='#FFF' />
+  // <PolarGrid radialLines={false}/>
+  // <Radar name="Performances" dataKey="value" fill="#FF0101" fillOpacity={0.6} />

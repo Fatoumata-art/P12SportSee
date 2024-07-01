@@ -6,6 +6,7 @@ import Chart from "../components/charts/chart";
 import Widget from "../components/widget";
 import fetchUserData from "./../service/api"
 import { useParams } from "react-router-dom";
+import fireIcon from "./../assets/fire.svg"
 
 
 console.log()
@@ -91,11 +92,11 @@ function Profil(){
                     <div className="chart-card">
                         <Chart2 data={dataChartSessions} />
                         <Chart3 data={transformedData} />
-                        <Chart4 value={userData?.score}/> 
+                        <Chart4 score={userData?.score*100}/> 
                     </div>               
                 </div>
                 <aside className="aside_left">
-                    <Widget type="Calorie" number={userData?.keyData.calorieCount+"g"} />
+                    <Widget type="Calorie" number={userData?.keyData.calorieCount+"g"} icon={fireIcon}/>
                     <Widget  type="Protéine" number={userData?.keyData.proteinCount+"g"} />
                     <Widget  type="Glucide" number={userData?.keyData.carbohydrateCount+"g"} />
                     <Widget  type="Lipide" number={userData?.keyData.lipidCount+"g"}/>
