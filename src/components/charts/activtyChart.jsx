@@ -1,8 +1,8 @@
-import React, { PureComponent } from 'react';
+
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import renderLegend from "./../ToolLip"
 
-
-function Chart(props){
+function Activity(props){
 
  
     
@@ -21,12 +21,12 @@ function Chart(props){
               bottom: 0,
             }}
             data={props.data}
-            key={Chart}
+            key={Activity}
            
           >
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey={props.name} />
-            <Legend iconType="circle" align="right"verticalAlign="top" wrapperStyle={{top: 20}}/>
+            <Legend iconType="circle" align="right"verticalAlign="top" wrapperStyle={{top: 20}} content={renderLegend}/>
             <Tooltip />
             <Bar yAxisId="left" dataKey="pv" fill="#282D30" barSize={10} radius={[5, 5, 0, 0]} unit='kg'/>
             <Bar yAxisId="right" dataKey="uv" fill="#E60000" barSize={10} radius={[5, 5, 0, 0]} unit='Kcal'/>
@@ -38,4 +38,4 @@ function Chart(props){
  
 
 
-export default Chart
+export default Activity

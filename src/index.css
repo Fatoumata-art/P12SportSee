@@ -113,6 +113,10 @@ a{
 
 /*  banner */
 
+.user-name{
+  color: #E60000;
+}
+
 /* main container */
 
 .main_container{
@@ -130,6 +134,34 @@ a{
   padding: 2rem;
 }
 
+/* errorPage */
+
+.error-page{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+ 
+}
+
+.error h1{
+  font-size: 200px;
+}
+
+.error p {
+  font-size: 35px;
+}
+
+.error a, .error a:active{
+  color: #FFF;
+  text-decoration: none;
+}
+
+.error a:hover {
+  color: red;
+}
 
 
 /* chart container */
@@ -173,6 +205,7 @@ a{
 .card .title{
   position: absolute;
   left: 30px;
+  top: 5px;
 }
 
 .card .desc{
@@ -246,11 +279,13 @@ a{
   gap: 15px;
   font-size: 0.8rem;
 }
- .widget .icon{
-  height: 50px;
-  width: 50px;
+ .widget .widget-img{
+  height: 60px;
+  width: 60px;
   border-radius: 5px;
-  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
  }
 
  

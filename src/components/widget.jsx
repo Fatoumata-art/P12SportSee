@@ -7,40 +7,37 @@ import LunchDiningIcon from '@mui/icons-material/LunchDining';
 const Widget = ({type, number, icon}) => {
    
     let data ;
+
    
     switch( type ){
         case "Calorie":
             data = {
                     icon: icon,  
-                    className:"icon", 
-                    style: { backgroundColor: "#e2c5c5", color: "#FF0000", fontSize: "small"},
+                    style: { backgroundColor: "#faeaea", color: "#FF0000"},
                     number: number,
                     title: "calories",
             };
             break;
             case "Protéine":
                 data = {
-                        icon: <EggIcon
-                        className="icon" 
-                    style={{ backgroundColor: "#d6e2ea", color: "#4AB8FF", fontSize: "small"}} />,
+                        icon: icon, 
+                        style:{ backgroundColor: "#d6e2ea", color: "#4AB8FF"} ,
                         number: number,
                         title: "Protéines",
                 };
                 break;
                 case "Glucide":
                     data = {
-                            icon: <AppleIcon  
-                            className="icon" 
-                            style={{ backgroundColor: "#e5e0cd", color: "#f9cf24", fontSize: "small"}} />,
+                            icon: icon, 
+                            style:{ backgroundColor: "#e5e0cd", color: "#f9cf24"},
                             number: number,
                             title: "Glucides",
                     };
                     break;
                     case "Lipide":
                         data = {
-                                icon: <LunchDiningIcon
-                                className="icon" 
-                                style={{ backgroundColor: "#ead6dc", color: "#FD5181", fontSize: "small"}} />,
+                                icon: icon, 
+                                style:{ backgroundColor: "#ead6dc", color: "#FD5181"},
                                 number: number,
                                 title: "Lipides",
                         };
@@ -51,7 +48,9 @@ const Widget = ({type, number, icon}) => {
    
   return (
     <div className="widget">
-        {data.icon}
+        <div className="widget-img" style={data.style}>
+        <img className='icon'  src={data.icon} alt="icon" />
+        </div>
         <div className='widget-text'>
         <h3>{data.number}</h3>
         <span>{data.title}</span>

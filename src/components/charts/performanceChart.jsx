@@ -1,7 +1,7 @@
 
 import { Radar, RadarChart, PolarGrid, Legend, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
 
-function Chart3(props){
+function Performance(props){
 const data = [
   {
     subject: 'Math',
@@ -59,7 +59,7 @@ const data = [
     );
   }
 
-  export default Chart3
+  export default Performance
   // <PolarAngleAxis dataKey="kind" angleAxisId={0} tickLine={false} tick={{ fontSize: 10 }} stroke='#FFF' />
   // <PolarGrid radialLines={false}/>
   // <Radar name="Performances" dataKey="value" fill="#FF0101" fillOpacity={0.6} />

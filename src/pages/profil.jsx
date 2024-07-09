@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react'
-import Chart4 from "../components/charts/Chart4";
-import Chart3 from "../components/charts/Chart3";
-import Chart2 from "../components/charts/Chart2";
-import Chart from "../components/charts/chart";
+import Score from "../components/charts/scoreChart";
+import Performance from "../components/charts/performanceChart";
+import Session from "../components/charts/sessionChart";
+import Activity from "../components/charts/activtyChart";
 import Widget from "../components/widget";
 import fetchUserData from "./../service/api"
-import { useParams } from "react-router-dom";
-import fireIcon from "./../assets/fire.svg"
+import { useParams, Navigate  } from "react-router-dom";
+import fireIcon from "../assets/fire.svg";
+import chickenIcon from "../assets/chicken.svg";
+import cheeseburgerIcon from "../assets/cheeseburger.svg";
+import appleIcon from "../assets/apple.svg"
 
 
 console.log()
@@ -29,6 +32,9 @@ function Profil(){
     
     const userData = resData && resData.length ? resData[0] : null;
     
+    if (resData && !resData.length)
+        return <Navigate to="/notFound"/> 
+
 
      //feching user activity data dynamically
      const resActivity = backEndData.activity?.filter((data) => data.userId == id);
@@ -72,34 +78,31 @@ function Profil(){
           });
         
       
-
-    
-    
     return (
         <main className="main">
            <div className="user_header">
 
-           <h1>Bonjour {userData?.userInfos.firstName}</h1>
-            <p>Félicitation ! Vous avez explosé vos objectifs hier</p>
+           <h1>Bonjour <span className='user-name'>{userData?.userInfos.firstName}</span></h1>
+            <p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
            </div>
            <section className="main_container">
                 <div className="charts_container">
                     <div className="chart-bar">
                        
-                        <Chart data={dataChartActivity} />
+                        <Activity data={dataChartActivity} />
     
                     </div>
                     <div className="chart-card">
-                        <Chart2 data={dataChartSessions} />
-                        <Chart3 data={transformedData} />
-                        <Chart4 score={userData?.score*100}/> 
+                        <Session data={dataChartSessions} />
+                        <Performance data={transformedData} />
+                        <Score score={userData?.score*100}/> 
                     </div>               
                 </div>
                 <aside className="aside_left">
                     <Widget type="Calorie" number={userData?.keyData.calorieCount+"g"} icon={fireIcon}/>
-                    <Widget  type="Protéine" number={userData?.keyData.proteinCount+"g"} />
-                    <Widget  type="Glucide" number={userData?.keyData.carbohydrateCount+"g"} />
-                    <Widget  type="Lipide" number={userData?.keyData.lipidCount+"g"}/>
+                    <Widget  type="Protéine" number={userData?.keyData.proteinCount+"g"} icon={chickenIcon}/>
+                    <Widget  type="Glucide" number={userData?.keyData.carbohydrateCount+"g"} icon={appleIcon} />
+                    <Widget  type="Lipide" number={userData?.keyData.lipidCount+"g"} icon={cheeseburgerIcon}/>
                    
                 </aside>
             </section>

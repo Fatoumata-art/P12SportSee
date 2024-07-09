@@ -2,7 +2,7 @@ import React from 'react'
 import { CircularProgressBar } from '@tomik23/react-circular-progress-bar'
 
 
-const Chart4 = ({score}) => {
+const Score = ({score}) => {
 
   console.log("score",score)
     const props = {
@@ -23,4 +23,4 @@ const Chart4 = ({score}) => {
   )
 }
 
-export default Chart4
+export default Score

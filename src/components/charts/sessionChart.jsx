@@ -15,7 +15,7 @@ import {
   ResponsiveContainer,
 } from 'recharts';
 
-function Chart2 (props) {
+function Session (props) {
 const data = [
   {
     name: 'L',
@@ -61,7 +61,7 @@ const data = [
   },
 ];
 
-console.log("chart2", props.data)
+//console.log("chart2", props.data)
     return (
         <div className='card' 
           style={{backgroundColor: "#E60000",
@@ -86,4 +86,4 @@ console.log("chart2", props.data)
     );
   }
 
-  export default Chart2
+  export default Session
